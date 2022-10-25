@@ -1,17 +1,28 @@
-const sendBtn = document.querySelector('#sendBtn');
-const messageIn = document.querySelector('#messageIn');
-const messageOut = document.querySelector('#messageOut');
+const counter = document.querySelector('.counter');
+const addCount = document.querySelector('#addCountBtn');
+const lowerCount = document.querySelector('#lowerCountBtn');
 
-sendBtn.addEventListener('click', sendMsg)
+let count = 0;
 
-function sendMsg (){
-    let content = messageIn.value;
-    //console.log(content);
-    if(content === ''){
-        alert('Please Enter Valid Value.Current Value is Empty')
+addCount.addEventListener('click', incrementCounter)
+lowerCount.addEventListener('click', decrementCounter)
+
+function incrementCounter() {
+    count++;
+    counter.innerHTML = count;
+    if (counter.innerHTML > '0') {
+        counter.style.color = '#4caf50'
+    } else if (counter.innerHTML === '0') {
+        counter.style.color = 'white';
     }
-    else{
-        messageOut.innerHTML = content;
-        messageIn.value = '';
+}
+
+function decrementCounter() {
+    count--;
+    counter.innerHTML = count;
+    if (counter.innerHTML < '0') {
+        counter.style.color = 'red'
+    } else if (counter.innerHTML === '0') {
+        counter.style.color = 'white';
     }
 }

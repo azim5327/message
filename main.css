@@ -1,53 +1,45 @@
-body{
+body {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #88d5e9;
-    color: #333;
-    font-family: 'calibri',sans-serif;
-    font-weight: 400;
-    text-transform: capitalize;
+    background: url('counter.jpeg')center/cover no-repeat;
+    /*background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
+.container-box {
+    flex: 0 0 70%;
     text-align: center;
-    padding: 2rem;
-    border-radius: 7px;
+    border: 3px solid grey;
+    padding: 1rem;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px 10px black;
+}
+
+.counter {
+    font-size: 6rem;
+}
+
+.btn {
     background: #fff;
-    flex: 0 0 80%;
-}
-
-button{
-    display: block;
-    font-size: 2rem;
-    margin: 1rem auto;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background: #6cc3d8;
     border-radius: 8px;
-    border: none;
-    text-transform: capitalize;
-}
-
-button:hover{
-    opacity: 0,0;
-    cursor: pointer;
-}
-
-input[type=text]{
+    font-size: 2rem;
     padding: 0.5rem;
-    margin: 1rem;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    border: 3px solid #88d5e9;
+    margin: 0.5rem 0.25rem;
+    border: 3px solid #f15025;
+    box-shadow: 0px 5px #001221;
     outline: none;
 }
 
-input[type=text]:focus{
-    box-shadow: 0 0 10px #88d5e9;
+.btn:hover {
+    background-color: #4caf50;
+    color: white;
 }
-#messageOut{
-    margin: 0.5rem 0;
-    color: #88d5e9;
+
+.btn:active {
+    box-shadow: none;
 }
